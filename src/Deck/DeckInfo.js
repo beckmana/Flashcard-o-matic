@@ -46,33 +46,33 @@ function DeckInfo() {
 
 
 
-    if (deck.id) {
-        return (
-            <div>
-               <nav aria-label='breadcrumb'>
-                    <ol className="breadcrumb">
-                        <li className="breadcrumb-item text-primary"><Link to='/'>Home</Link></li>
-                        <li className="breadcrumb-item active" aria-current='page'>{deck.name}</li>
-                    </ol>
-                </nav>
-                <h2>
-                    {deck.name}
-                    <button className="btn btn-danger float-right" onClick={handleDelete}>Delete</button>
-                </h2>
-                <p>{deck.description}</p> 
-                <Link to={`/decks/${deck.id}/edit`}>
-                    <button className="btn btn-primary mr-2 mb-2">Edit</button>
-                </Link>
-                <Link to={`/decks/${deck.id}/study`}>
-                    <button className="btn btn-secondary mr-2 mb-2">Study</button>
-                </Link>
-                <br /><br />
-                <CardList deckId={deckId} deck={deck} />
-            </div>
-        )
-    } else {
+    if (!deck.id) {
         return <p>Loading...</p>
     }
+
+    return (
+        <div>
+            <nav aria-label='breadcrumb'>
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item text-primary"><Link to='/'>Home</Link></li>
+                    <li className="breadcrumb-item active" aria-current='page'>{deck.name}</li>
+                </ol>
+            </nav>
+            <h2>
+                {deck.name}
+                <button className="btn btn-danger float-right" onClick={handleDelete}>Delete</button>
+            </h2>
+            <p>{deck.description}</p> 
+            <Link to={`/decks/${deck.id}/edit`}>
+                <button className="btn btn-primary mr-2 mb-2">Edit</button>
+            </Link>
+            <Link to={`/decks/${deck.id}/study`}>
+                <button className="btn btn-secondary mr-2 mb-2">Study</button>
+            </Link>
+            <br /><br />
+            <CardList deck={deck} />
+        </div>
+    )
 }
 
 export default DeckInfo

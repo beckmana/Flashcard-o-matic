@@ -30,6 +30,8 @@ Edit any of the files outside of the public/src/ directory.
 Change the location of any of the existing files.
 If you feel as though one of your solutions is working but something isn't showing up right on the site or in the tests, reach out for help.
 
+---
+
 ## API
 There are two datasets that are a part of this project: decks and cards.
 
@@ -80,16 +82,22 @@ Each card is an object with the following shape:
 
 Each card represents a flashcard with a front , where the question is displayed, and a back, where the answer can be found. A card also contains the deckId, which matches the card to the deck that the card belongs to.
 
+---
+
 ## Utility functions
 There are several utility functions exported from src/utils/api/index.js that allow you to perform create, read, update, and delete operations with the API server. You will need to select and use the appropriate functions in your React components. Please read the documentation in the file for more information.
+
+---
 
 ## Screens
 You are tasked with creating the following screens that work with the above datasets.
 
+
+---
+
 ### Home
 The Home screen is the first page the user sees. It is displayed at /.
 
-Home screen
 
 The Home screen has the following features:
 
@@ -104,12 +112,11 @@ The Home screen has the following features:
 
 You can use window.confirm() to create the modal dialog shown in the screenshot below.
 
-Delete Deck prompt
+
+---
 
 ### Study
 The Study screen is displayed at /decks/:deckId/study.
-
-Study first card
 
 The Study screen has the following features:
 
@@ -140,6 +147,9 @@ Studying a Deck with two or fewer cards should display a "Not enough cards" mess
 
   * Clicking the "Add Cards" button should take the user to the Add Card screen.
 
+  
+---
+
 ### Create Deck
 The Home screen has a "Create Deck" button that brings the user to the Create Deck screen.
 
@@ -154,6 +164,7 @@ The description field is a `<textarea>` field that can be multiple lines of text
 * If the user clicks "cancel", the user is taken to the Home screen.
 
 
+---
 ### Deck
 The Deck screen displays all of the information about a deck.
 
@@ -186,6 +197,8 @@ Each card in the deck:
     * You can use window.confirm() to create the modal dialog shown in the screenshot below.
 
 
+---
+
 ### Edit Deck
 The Edit Deck screen allows the user to modify information on an existing deck.
 
@@ -196,6 +209,8 @@ The Edit Deck screen has the following features:
 * It displays the same form as the Create Deck screen, except it is pre-filled with information for the existing deck. The user can edit and update the form.
 * If the user clicks "Cancel", the user is taken to the Deck screen.
 
+
+---
 ### Add Card
 The Add Card screen allows the user to add a new card to an existing deck.
 
@@ -208,6 +223,7 @@ The Add Card screen has the following features:
 * If the user clicks "Save", a new card is created and associated with the relevant deck. Then the form is cleared and the process for adding a card is restarted.
 * If the user clicks "Done", the user is taken to the Deck screen.
 
+---
 ### Edit Card
 The Edit Card screen allows the user to modify information on an existing card.
 

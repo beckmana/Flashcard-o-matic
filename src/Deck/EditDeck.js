@@ -79,7 +79,7 @@ function EditDeck() {
                             Cancel
                             </button>
                     </Link>
-                    <button className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>

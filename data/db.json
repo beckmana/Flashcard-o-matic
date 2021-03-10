@@ -51,6 +51,30 @@
       "back": "Renders the first matching child <Route> ",
       "deckId": 2,
       "id": 5
+    },
+    {
+      "front": "Hello From the front",
+      "back": "Hello from the back",
+      "deckId": 3,
+      "id": 7
+    },
+    {
+      "front": "Why was 6 afraid of 7?",
+      "back": "because 7 8 9",
+      "deckId": 3,
+      "id": 8
+    },
+    {
+      "front": "123456789",
+      "back": "987654321",
+      "deckId": 3,
+      "id": 9
+    },
+    {
+      "front": "What are my dog's names?",
+      "back": "Louie and Lambeau ",
+      "deckId": 3,
+      "id": 10
     }
   ]
 }

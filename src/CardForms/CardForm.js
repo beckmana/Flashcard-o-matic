@@ -11,7 +11,7 @@ function CardForm({setFormData, formData, handleSubmit, back}) {
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
-                    <div class="row">
+                    <div className="row">
                         <label htmlFor="front" className="col-form-label"> Front: </label>
                         <div className="col">
                         <textarea
@@ -25,7 +25,7 @@ function CardForm({setFormData, formData, handleSubmit, back}) {
                         </div>
                     </div>
                     <br />
-                    <div class="row">
+                    <div className="row">
                         <label htmlFor="back" className="col-form-label"> Back: </label>
                         <div className="col">
                             <textarea

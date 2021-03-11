@@ -52,18 +52,18 @@ function EditDeck() {
     return (
         <div>
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item">
                         <Link to="/">
                             Home
                         </Link>
                     </li>
-                    <li class="breadcrumb-item">
+                    <li className="breadcrumb-item">
                         <Link to={`/decks/${deckId}`}>
                             {editDeck.name}
                         </Link>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">
+                    <li className="breadcrumb-item active" aria-current="page">
                         Edit Deck
                     </li>
                 </ol>

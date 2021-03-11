@@ -37,13 +37,13 @@ function CreateDeck() {
     return (
         <div>
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item">
                         <Link to="/">
                             Home
                         </Link>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">
+                    <li className="breadcrumb-item active" aria-current="page">
                         Create Deck
                     </li>
                 </ol>
@@ -57,7 +57,7 @@ function CreateDeck() {
                     <Link to="/">
                         <button className="btn btn-secondary mr-2">
                             Cancel
-                            </button>
+                        </button>
                     </Link>
                     <button className="btn btn-primary">Submit</button>
                 </div>
@@ -66,4 +66,4 @@ function CreateDeck() {
     )
 }
 
-export default CreateDeck
+export default CreateDeck;

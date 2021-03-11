@@ -16,7 +16,7 @@ function DeckForm({ handleChange, deck }) {
     */
     return (
         <div className="form-group">
-                    <div class="row">
+                    <div className="row">
                         <label htmlFor="name" className="col-form-label"> Deck Name: </label>
                         <div className="col">
                             <input
@@ -30,7 +30,7 @@ function DeckForm({ handleChange, deck }) {
                         </div>
                     </div>
                     <br />
-                    <div class="row">
+                    <div className="row">
                         <label htmlFor="description" className="col-form-label">Description: </label>
                         <div className="col">
                             <textarea

@@ -1,13 +1,15 @@
 import React, {useEffect, useState} from "react";
 import { useParams, Link } from "react-router-dom";
 import { readDeck } from "../utils/api/index";
+import StudyCard from "./StudyCard";
+import NotEnoughCards from "./NotEnoughCards";
 
 /*
  The Study screen has the following features:
 
     xx The path to this screen should include the deckId (i.e., /decks/:deckId/study).
-    - There is a breadcrumb navigation bar with links to home /, followed by the name of the deck being studied and finally the text Study (e.g., Home/Rendering In React/Study).
-    - The deck title (i.e., "Study: Rendering in React" ) is shown on the screen.
+    xx There is a breadcrumb navigation bar with links to home /, followed by the name of the deck being studied and finally the text Study (e.g., Home/Rendering In React/Study).
+    xx The deck title (i.e., "Study: Rendering in React" ) is shown on the screen.
     - Cards are shown one at a time, front-side first.
     - A button at the bottom of each card "flips" it to the other side.
     - After flipping the card, the screen shows a next button to continue to the next card.
@@ -24,13 +26,21 @@ function Study() {
     const [deck, setDeck] = useState({});
     
     useEffect(() => {
-        const abortController = new AbortController();
-        readDeck(deckId, abortController.signal).then(setDeck);
-
-        return () => abortController.abort();
+        const loadDeck = async () => {
+          const loadedDeck = await readDeck(deckId);
+          setDeck(() => loadedDeck);
+        };
+        loadDeck();
     }, [deckId]);
+    
+    const cards = deck.cards
+    console.log(cards)
 
 
+    if (!deck.cards) {
+        return <p>Loading...</p>
+    }
+    
     return (
         <>
              <nav aria-label='breadcrumb'>
@@ -46,7 +56,12 @@ function Study() {
                         </li>
                     </ol>
                 </nav>
-            <h2>{deck.name}</h2>
+            <h2>Study: {deck.name}</h2>
+            <br />
+            {deck.cards.length >= 3 
+                    ? <StudyCard cardsInDeck={deck.cards} /> 
+                    : <NotEnoughCards deckId={deckId} cardsInDeck={deck.cards} />
+            }
         </>
     )
 }

@@ -16,9 +16,14 @@
       "description": "Testing TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting TestTesting "
     },
     {
-      "name": "mermaid",
-      "description": "sdgdbsfsdgbasdfsdafasdvsadsaf",
-      "id": 4
+      "id": 4,
+      "name": "Alt-Rock Songs",
+      "description": "A collection of Alt-Rock Song titles and artists. "
+    },
+    {
+      "name": "All about me",
+      "description": "Fun facts about me =)",
+      "id": 5
     }
   ],
   "cards": [
@@ -75,6 +80,24 @@
       "back": "Louie and Lambeau ",
       "deckId": 3,
       "id": 10
+    },
+    {
+      "front": "Song name: Nothing Personal",
+      "back": "Artist: Des Rocs",
+      "deckId": 4,
+      "id": 11
+    },
+    {
+      "front": "Song: Someone Else",
+      "back": "Artists: Rezz and Grabbitz",
+      "deckId": 4,
+      "id": 12
+    },
+    {
+      "front": "Hills Have Eyes",
+      "back": "POORSTACY",
+      "deckId": 4,
+      "id": 13
     }
   ]
 }

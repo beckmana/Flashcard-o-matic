@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
 import { deleteDeck, readDeck } from "../utils/api/index";
-import CardList from "../Cards/CardList"
+import CardList from "./CardList"
 
 /*
  The Deck screen has the following features:
@@ -22,7 +22,7 @@ import CardList from "../Cards/CardList"
         - has a “Delete” button that allows that card to be deleted.
 */
 
-function DeckInfo() {
+function ViewDeck() {
     const { deckId } = useParams();
     const history = useHistory();
 
@@ -75,4 +75,4 @@ function DeckInfo() {
     )
 }
 
-export default DeckInfo
+export default ViewDeck;

@@ -3,12 +3,12 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import Home from "../Home/Home";
-import Study from "../Home/Study";
-import EditDeck from "../Deck/EditDeck";
-import DeckInfo from "../Deck/DeckInfo";
-import EditCard from "../Cards/EditCard";
-import AddCard from "../Cards/AddCard";
-import CreateDeck from "../Deck/CreateDeck";
+import Study from "../Study/Study";
+import EditDeck from "../DeckForms/EditDeck";
+import ViewDeck from "../ViewDeck/ViewDeck";
+import EditCard from "../CardForms/EditCard";
+import AddCard from "../CardForms/AddCard";
+import CreateDeck from "../DeckForms/CreateDeck";
 
 function Layout() {
 
@@ -33,7 +33,7 @@ function Layout() {
               <EditCard />
             </Route>
             <Route path="/decks/:deckId">
-              <DeckInfo />
+              <ViewDeck />
             </Route>
             <Route exact={true} path="/">
               <Home />

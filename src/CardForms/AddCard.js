@@ -58,9 +58,6 @@ function AddCard() {
             </Link>
         )
    
-
-    
-    
     return (
         <>
              <nav aria-label='breadcrumb'>
@@ -72,7 +69,7 @@ function AddCard() {
                             <Link to={`/decks/${deckId}`}>{deck.name}</Link>
                         </li>
                         <li className="breadcrumb-item active" aria-current='page'>
-                            Study
+                            Add Card
                         </li>
                     </ol>
                 </nav>

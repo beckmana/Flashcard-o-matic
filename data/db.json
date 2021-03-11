@@ -19,11 +19,6 @@
       "id": 4,
       "name": "Alt-Rock Songs",
       "description": "A collection of Alt-Rock Song titles and artists. "
-    },
-    {
-      "id": 5,
-      "name": "All about me",
-      "description": "Fun facts about me =)\n\n*good luck!*"
     }
   ],
   "cards": [
@@ -100,36 +95,6 @@
       "id": 13
     },
     {
-      "front": "What is my fav. dessert?",
-      "back": "ICE CREAM!!!",
-      "deckId": 5,
-      "id": 14
-    },
-    {
-      "front": "What are my cat's names?",
-      "back": "Leo and Lily",
-      "deckId": 5,
-      "id": 15
-    },
-    {
-      "front": "What are my dog's names",
-      "back": "Louie and Lambeau \n",
-      "deckId": 5,
-      "id": 16
-    },
-    {
-      "front": "What color is my car?",
-      "back": "Red",
-      "deckId": 5,
-      "id": 17
-    },
-    {
-      "front": "What month is my birthday?",
-      "back": "July",
-      "deckId": 5,
-      "id": 18
-    },
-    {
       "front": "Solve for x: \n\n4x + 3 = 11",
       "back": "x = 2",
       "deckId": 3,
@@ -140,6 +105,12 @@
       "back": "123456789",
       "deckId": 3,
       "id": 20
+    },
+    {
+      "front": "Song: The Moxie",
+      "back": "Artist: The Orphan The Poet",
+      "deckId": 4,
+      "id": 21
     }
   ]
 }

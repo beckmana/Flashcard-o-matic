@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams, useHistory } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { createCard, readDeck } from "../utils/api/index";
 import CardForm from "./CardForm";
 
@@ -21,7 +21,6 @@ import CardForm from "./CardForm";
 
 function AddCard() {
     const { deckId } = useParams();
-    const history = useHistory();
 
     const initialForm = {
         front: '',

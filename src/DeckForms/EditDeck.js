@@ -69,7 +69,7 @@ function EditDeck() {
                 </ol>
                 
             </nav>
-            <h2>Create Deck</h2>
+            <h2>Edit Deck: {editDeck.name}</h2>
             <br />
             <form onSubmit={handleSubmit}>
                 <DeckForm deck={editDeck} handleChange={handleChange} />

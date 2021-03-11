@@ -16,7 +16,7 @@ function Card({card, deck, handleDelete}) {
                             Edit
                         </button>
                     </Link>
-                        <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
+                        <button className="btn btn-danger" onClick={() => handleDelete(card)}>Delete</button>
                     </div>
                 </div>
             </div>

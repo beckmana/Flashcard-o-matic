@@ -46,12 +46,13 @@ function AddCard() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         await createCard(deckId, formData);
-        history.push(`/decks/${deckId}`);
+        setFormData({...initialForm})
+        //history.push(`/decks/${deckId}`);
     }
 
     const done =
         (
-            <Link to="/">
+            <Link to={`/decks/${deckId}`}>
                 <button className="btn btn-secondary mr-2">
                      Done
                  </button>

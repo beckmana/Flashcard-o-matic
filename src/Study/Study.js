@@ -33,9 +33,6 @@ function Study() {
         loadDeck();
     }, [deckId]);
     
-    const cards = deck.cards
-    console.log(cards)
-
 
     if (!deck.cards) {
         return <p>Loading...</p>

@@ -40,7 +40,7 @@ function CardForm({setFormData, formData, handleSubmit, back}) {
                 </div>
                 <div className="float-right mt-2 mb-2">
                     {back}
-                    <button type="submit" className="btn btn-primary">Save</button>
+                <button type="submit" className="btn btn-primary">Save</button>
                 </div>
             </div>
         </form>

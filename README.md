@@ -1,8 +1,7 @@
 # Flashcard-o-matic
 https://flashcard-o-matic.vercel.app/
 
-# Instructions
-You are tasked with building a number of different screens for the users of the flashcard app, as summarized below:
+There are a number of different screens for the users of the flashcard app, as summarized below:
 
 | Screen | Path | Description |
 |--------|------|-------------|
@@ -16,29 +15,18 @@ You are tasked with building a number of different screens for the users of the 
 
 ---
 
-All of the screens above will work on two common datasets. The datasets are related and at times you will need to work with both datasets to get the screens to work properly.
+This project includes:
 
-While working on these screens, you have both the tests and the screenshots below to act as a guide. You can create the screens in any order and are encouraged to organize your code using the "Grouping by route" technique you learned earlier.
-
-While working on this project, you should:
-
-Use well-named variables.
-Build small single responsibility components and functions.
-Display a "Not found" message if the user visits a URL that does not exist.
-Edit only files inside of the public/src/ directory.
-While working on this project, you should not:
-
-Change the names of the API functions.
-Edit any of the files outside of the public/src/ directory.
-Change the location of any of the existing files.
-If you feel as though one of your solutions is working but something isn't showing up right on the site or in the tests, reach out for help.
+Well-named variables.
+Small single responsibility components and functions.
+Displays a "Not found" message if the user visits a URL that does not exist.
 
 ---
 
 ## API
 There are two datasets that are a part of this project: decks and cards.
 
-You can view all the data inside of the data/db.json file. Each data set can be accessed via a named property in this file. The following is a partial listing of the data in data/db.json:
+All the data is inside of the data/db.json file. Each data set can be accessed via a named property in this file. The following is a partial listing of the data in data/db.json:
 
 ```json
 {
@@ -88,12 +76,11 @@ Each card represents a flashcard with a front , where the question is displayed,
 ---
 
 ## Utility functions
-There are several utility functions exported from src/utils/api/index.js that allow you to perform create, read, update, and delete operations with the API server. You will need to select and use the appropriate functions in your React components. Please read the documentation in the file for more information.
+There are several utility functions exported from src/utils/api/index.js that allow you to perform create, read, update, and delete operations with the API server. Please read the documentation in the file for more information.
 
 ---
 
 ## Screens
-You are tasked with creating the following screens that work with the above datasets.
 
 
 ---
@@ -104,7 +91,7 @@ The Home screen is the first page the user sees. It is displayed at /.
 
 The Home screen has the following features:
 
-* The path to this screen should be /.
+* The path to this screen is /.
 * A "Create Deck" button is shown and clicking it brings the user to the Create Deck screen.
 * Existing decks are each shown with the deck name, the number of cards, and a “Study,” “View,” and “Delete” button.
 * Clicking the “Study” button brings the user to the Study screen.
@@ -113,9 +100,6 @@ The Home screen has the following features:
 * Delete Deck prompt
   * When the user clicks the "Delete" button, a warning message is shown and the user can click "OK" or "Cancel". If the user clicks "OK", the deck is deleted and the deleted deck is no longer visible on the Home screen.
 
-You can use window.confirm() to create the modal dialog shown in the screenshot below.
-
-
 ---
 
 ### Study
@@ -123,7 +107,7 @@ The Study screen is displayed at /decks/:deckId/study.
 
 The Study screen has the following features:
 
-* The path to this screen should include the deckId (i.e., /decks/:deckId/study).
+* The path to this screen includes the deckId (i.e., /decks/:deckId/study).
 * There is a breadcrumb navigation bar with links to home /, followed by the name of the deck being studied and finally the text Study (e.g., Home/Rendering In React/Study).
 * The deck title (i.e., "Study: Rendering in React" ) is shown on the screen.
 * Cards are shown one at a time, front-side first.
@@ -138,8 +122,6 @@ A button at the bottom of each card "flips" it to the other side.
 
 * Restart prompt
 When all cards are finished, a message is shown and the user is offered the opportunity to restart the deck. If the user does not restart the deck, they return to the home screen.
-
-  * You can use window.confirm() to create the modal dialog shown in the screenshot below.
 
 * Study restart prompt
 
@@ -158,7 +140,7 @@ The Home screen has a "Create Deck" button that brings the user to the Create De
 
 The Create Deck screen has the following features:
 
-* The path to this screen should be /decks/new.
+* The path to this screen is /decks/new.
 * There is a breadcrumb navigation bar with a link to home / followed by the text Create Deck (i.e., Home/Create Deck).
 A form is shown with the appropriate fields for creating a new deck.
 * The name field is an `<input>` field of type text.
@@ -173,7 +155,7 @@ The Deck screen displays all of the information about a deck.
 
 The Deck screen has the following features:
 
-* The path to this screen should include the deckId (i.e., /decks/:deckId).
+* The path to this screen includes the deckId (i.e., /decks/:deckId).
 * There is a breadcrumb navigation bar with a link to home / followed by the name of the deck (e.g., Home/React Router).
 * The screen includes the deck name (e.g., "React Router") and deck description (e.g., "React Router is a collection of navigational components that compose declaratively in your application").
 * The screen includes "Edit", "Study", "Add Cards", and "Delete" buttons. Each button takes the user to a different destination, as follows:
@@ -197,8 +179,6 @@ Each card in the deck:
 
     * When the user clicks the "Delete" button associated with a card, a warning message is shown and the user can click "OK" or "Cancel". If the user clicks "OK", the card is deleted.
 
-    * You can use window.confirm() to create the modal dialog shown in the screenshot below.
-
 
 ---
 
@@ -207,7 +187,7 @@ The Edit Deck screen allows the user to modify information on an existing deck.
 
 The Edit Deck screen has the following features:
 
-* The path to this screen should include the deckId(i.e., /decks/:deckId/edit).
+* The path to this screen includes the deckId(i.e., /decks/:deckId/edit).
 * There is a breadcrumb navigation bar with a link to home /, followed by the name of the deck being edited, and finally the text Edit Deck (e.g., Home/Rendering in React/Edit Deck).
 * It displays the same form as the Create Deck screen, except it is pre-filled with information for the existing deck. The user can edit and update the form.
 * If the user clicks "Cancel", the user is taken to the Deck screen.
@@ -219,7 +199,7 @@ The Add Card screen allows the user to add a new card to an existing deck.
 
 The Add Card screen has the following features:
 
-* The path to this screen should include the deckId (i.e., /decks/:deckId/cards/new).
+* The path to this screen includes the deckId (i.e., /decks/:deckId/cards/new).
 * There is a breadcrumb navigation bar with a link to home /, followed by the name of the deck to which the cards are being added, and finally the text Add Card (e.g., Home/React Router/Add Card).
 * The screen displays the "React Router: Add Card" deck title.
 * A form is shown with the "front" and "back" fields for a new card. Both fields use a `<textarea>` tag that can accommodate multiple lines of text.
@@ -233,7 +213,7 @@ The Edit Card screen allows the user to modify information on an existing card.
 
 The Edit Card screen has the following features:
 
-* The path to this screen should include the deckId and the cardId (i.e., /decks/:deckId/cards/:cardId/edit).
+* The path to this screen includes the deckId and the cardId (i.e., /decks/:deckId/cards/:cardId/edit).
 * There is a breadcrumb navigation bar with a link to home /, followed by the name of the deck of which the edited card is a member, and finally the text Edit Card :cardId (e.g., Home/Deck React Router/Edit Card 4).
 * It displays the same form as the Add Card screen, except it is pre-filled with information for the existing card. It can be edited and updated.
 * If the user clicks on either "Save" or "Cancel", the user is taken to the Deck screen.
